@@ -54,6 +54,10 @@ Een lichte React-app om al je ritten bij te houden en maandelijks als PDF te exp
 
 Bestandsnamen volgen het patroon `kilometers-JJJJ-MM-JJJJMMDD-HHmm.pdf`, handig voor een maandelijks archief. Notities worden opgenomen in de tabel.
 
+## Schermafbeelding
+
+![Snelle maandplanning](./2025-09-20_10-32-45.png)
+
 ## Technische stack
 
 - [React 18](https://react.dev/)

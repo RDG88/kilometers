@@ -1,0 +1,26 @@
+version: "3.9"
+
+services:
+  dev:
+    build:
+      context: .
+      target: dev
+    ports:
+      - "5173:5173"
+    environment:
+      NODE_ENV: development
+    volumes:
+      - .:/app
+      - node_modules:/app/node_modules
+    command: sh -c "npm install && npm run dev -- --host 0.0.0.0 --port 5173"
+
+  prod:
+    image: ${KILOMETERS_IMAGE:-ghcr.io/your-gh-username/kilometers:latest}
+    build:
+      context: .
+      target: prod
+    ports:
+      - "8080:80"
+
+volumes:
+  node_modules:

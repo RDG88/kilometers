@@ -1,0 +1,8 @@
+version: "3.9"
+
+services:
+  prod:
+    image: ghcr.io/rdg88/kilometers:main
+    ports:
+      - "8080:80"
+    restart: unless-stopped
